@@ -1,4 +1,4 @@
-function App() {
+/* function App() {
   return (
     
 <div className="sm:bg-amber-500  md:bg-amber-700">
@@ -6,6 +6,21 @@ function App() {
 
       </p>
     </div>
+  )
+} */
+
+
+export default App
+
+function App() {
+  return (
+    <div className="md:block hidden">
+      <p class= "text-pink"> i appear on screen wider than 768px
+
+      </p>
+    </div> 
+
+
   )
 }
 
