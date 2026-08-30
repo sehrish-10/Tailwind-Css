@@ -1,67 +1,741 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-    <div class="bg-pink-200  h-10 w-full border-2  border-violet-600  rounded-md my-4 p-10 flex justify-center items-center">
-      <h1 class="text-center text-lg font-mono   font-extrabold underline text-green-500">
-    Hello world!
-  </h1>
-  </div>  
-
-   <div class="flex-col  item-center  justify-centered space-y-6 mt-2"> 
-    <div class="grid grid-cols-5 gap-2 mt-2 mx-2">
-    <div class="h-16  rounded-full bg-blue-500 " ></div>
-    <div class="h-16  rounded-full bg-pink-300 " ></div>
-    <div class="h-16  rounded-full bg-yellow-200 " ></div>
-
-  </div>
-
-
-</body>
-</html> -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Tailwind Practice</title>
+
+  <title>Tailwind CSS Practice</title>
 </head>
 
-<body class="min-h-screen bg-gray-100 flex items-center justify-center">
+<body class="bg-gray-100 text-gray-800">
 
-  <div class="bg-white w-80 rounded-2xl shadow-lg p-6 text-center">
+  <!-- ================= NAVBAR ================= -->
 
-    <div class="w-20 h-20 bg-pink-100 rounded-full mx-auto flex items-center justify-center">
-      <span class="text-3xl">🌸</span>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div
+          class="w-11 h-11 bg-pink-500 text-white rounded-full
+                 flex items-center justify-center font-bold text-lg
+                 hover:rotate-12 transition duration-300"
+        >
+          SB
+        </div>
+
+        <h1 class="text-xl font-bold">
+          Sehrish
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        <a
+          href="#home"
+          class="text-gray-600 hover:text-pink-500 transition"
+        >
+          Home
+        </a>
+
+        <a
+          href="#about"
+          class="text-gray-600 hover:text-pink-500 transition"
+        >
+          About
+        </a>
+
+        <a
+          href="#skills"
+          class="text-gray-600 hover:text-pink-500 transition"
+        >
+          Skills
+        </a>
+
+        <a
+          href="#projects"
+          class="text-gray-600 hover:text-pink-500 transition"
+        >
+          Projects
+        </a>
+
+        <a
+          href="#contact"
+          class="bg-pink-500 text-white px-5 py-2 rounded-full
+                 hover:bg-pink-600 hover:shadow-lg
+                 transition duration-300"
+        >
+          Contact
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section
+    id="home"
+    class="min-h-[90vh] flex items-center"
+  >
+
+    <div
+      class="max-w-6xl mx-auto px-6 py-20
+             grid md:grid-cols-2 gap-12 items-center"
+    >
+
+      <!-- Left Side -->
+      <div>
+
+        <span
+          class="inline-block bg-pink-100 text-pink-600
+                 px-4 py-2 rounded-full text-sm font-semibold mb-5"
+        >
+          👋 Welcome to my portfolio
+        </span>
+
+        <h1
+          class="text-5xl md:text-6xl font-extrabold
+                 leading-tight text-gray-900"
+        >
+          Hi, I'm
+          <span class="text-pink-500">
+            Sehrish
+          </span>
+        </h1>
+
+        <h2 class="text-2xl font-semibold text-gray-600 mt-4">
+          Frontend Developer
+        </h2>
+
+        <p class="text-gray-500 text-lg leading-8 mt-5 max-w-lg">
+          I create modern, responsive and user-friendly
+          websites using HTML, CSS, JavaScript, React and Tailwind CSS.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4 mt-8">
+
+          <button
+            class="bg-pink-500 text-white px-7 py-3 rounded-full
+                   font-semibold shadow-md
+                   hover:bg-pink-600 hover:-translate-y-1
+                   transition duration-300"
+          >
+            View Projects
+          </button>
+
+          <button
+            class="border-2 border-pink-500 text-pink-500
+                   px-7 py-3 rounded-full font-semibold
+                   hover:bg-pink-500 hover:text-white
+                   transition duration-300"
+          >
+            Download CV
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Right Side -->
+      <div class="flex justify-center">
+
+        <div class="relative">
+
+          <!-- Main Circle -->
+          <div
+            class="w-72 h-72 md:w-96 md:h-96
+                   bg-pink-200 rounded-full
+                   flex items-center justify-center
+                   shadow-2xl"
+          >
+            <div
+              class="w-56 h-56 md:w-72 md:h-72
+                     bg-white rounded-full
+                     flex items-center justify-center
+                     text-7xl shadow-inner"
+            >
+              💻
+            </div>
+          </div>
+
+          <!-- Floating Badge -->
+          <div
+            class="absolute -top-5 -right-5
+                   bg-white shadow-xl rounded-2xl
+                   px-5 py-4"
+          >
+            <p class="text-sm text-gray-400">
+              Experience
+            </p>
+
+            <p class="text-xl font-bold text-pink-500">
+              2+ Months
+            </p>
+          </div>
+
+          <!-- Floating Badge -->
+          <div
+            class="absolute -bottom-5 -left-5
+                   bg-white shadow-xl rounded-2xl
+                   px-5 py-4"
+          >
+            <p class="text-sm text-gray-400">
+              Projects
+            </p>
+
+            <p class="text-xl font-bold text-pink-500">
+              6+
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <h1 class="text-2xl font-bold text-gray-800 mt-4">
-      Hello, Sehrish!
-    </h1>
+  </section>
 
-    <p class="text-gray-500 mt-2">
-      Keep learning Tailwind CSS and building beautiful websites.
-    </p>
 
-    <button
-      class="mt-5 bg-pink-500 text-white px-6 py-2 rounded-full
-             hover:bg-pink-600 hover:scale-105
-             transition duration-300"
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about" class="bg-white py-20">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-12">
+
+        <span class="text-pink-500 font-semibold">
+          GET TO KNOW ME
+        </span>
+
+        <h2 class="text-4xl font-bold mt-2">
+          About Me
+        </h2>
+
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+          A passionate developer who enjoys turning ideas
+          into beautiful and functional websites.
+        </p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Card -->
+        <div
+          class="p-7 bg-gray-50 rounded-2xl
+                 border border-gray-100
+                 hover:-translate-y-2 hover:shadow-xl
+                 transition duration-300"
+        >
+          <div class="text-4xl mb-4">
+            🎨
+          </div>
+
+          <h3 class="text-xl font-bold mb-3">
+            UI Design
+          </h3>
+
+          <p class="text-gray-500 leading-7">
+            I enjoy creating clean, modern and attractive
+            interfaces with a focus on user experience.
+          </p>
+        </div>
+
+
+        <!-- Card -->
+        <div
+          class="p-7 bg-gray-50 rounded-2xl
+                 border border-gray-100
+                 hover:-translate-y-2 hover:shadow-xl
+                 transition duration-300"
+        >
+          <div class="text-4xl mb-4">
+            ⚡
+          </div>
+
+          <h3 class="text-xl font-bold mb-3">
+            Development
+          </h3>
+
+          <p class="text-gray-500 leading-7">
+            I build responsive websites using modern
+            frontend technologies and reusable components.
+          </p>
+        </div>
+
+
+        <!-- Card -->
+        <div
+          class="p-7 bg-gray-50 rounded-2xl
+                 border border-gray-100
+                 hover:-translate-y-2 hover:shadow-xl
+                 transition duration-300"
+        >
+          <div class="text-4xl mb-4">
+            🚀
+          </div>
+
+          <h3 class="text-xl font-bold mb-3">
+            Learning
+          </h3>
+
+          <p class="text-gray-500 leading-7">
+            I continuously learn new technologies and
+            improve my development skills.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills" class="py-20">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-12">
+
+        <span class="text-pink-500 font-semibold">
+          MY TECHNOLOGIES
+        </span>
+
+        <h2 class="text-4xl font-bold mt-2">
+          Skills
+        </h2>
+
+      </div>
+
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">🌐</div>
+          <h3 class="font-bold mt-3">HTML5</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">🎨</div>
+          <h3 class="font-bold mt-3">CSS3</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">⚡</div>
+          <h3 class="font-bold mt-3">JavaScript</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">⚛️</div>
+          <h3 class="font-bold mt-3">React</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">🌊</div>
+          <h3 class="font-bold mt-3">Tailwind</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">🟢</div>
+          <h3 class="font-bold mt-3">Git</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">🐙</div>
+          <h3 class="font-bold mt-3">GitHub</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md
+                    text-center hover:shadow-xl
+                    hover:-translate-y-2 transition">
+          <div class="text-4xl">▲</div>
+          <h3 class="font-bold mt-3">Vercel</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects" class="bg-white py-20">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-12">
+
+        <span class="text-pink-500 font-semibold">
+          MY WORK
+        </span>
+
+        <h2 class="text-4xl font-bold mt-2">
+          Recent Projects
+        </h2>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-3 gap-7">
+
+        <!-- Project 1 -->
+        <div
+          class="bg-gray-50 rounded-2xl overflow-hidden
+                 shadow-md hover:shadow-2xl
+                 hover:-translate-y-2
+                 transition duration-300"
+        >
+
+          <div
+            class="h-44 bg-gradient-to-br
+                   from-pink-300 to-purple-300
+                   flex items-center justify-center
+                   text-6xl"
+          >
+            📔
+          </div>
+
+          <div class="p-6">
+
+            <span
+              class="text-xs bg-pink-100 text-pink-600
+                     px-3 py-1 rounded-full"
+            >
+              React
+            </span>
+
+            <h3 class="text-xl font-bold mt-4">
+              Digital Journal
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+              A beautiful digital journal application
+              with a clean and simple interface.
+            </p>
+
+            <button
+              class="mt-5 text-pink-500 font-semibold
+                     hover:text-pink-700"
+            >
+              View Project →
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 2 -->
+        <div
+          class="bg-gray-50 rounded-2xl overflow-hidden
+                 shadow-md hover:shadow-2xl
+                 hover:-translate-y-2
+                 transition duration-300"
+        >
+
+          <div
+            class="h-44 bg-gradient-to-br
+                   from-green-200 to-emerald-300
+                   flex items-center justify-center
+                   text-6xl"
+          >
+            🌿
+          </div>
+
+          <div class="p-6">
+
+            <span
+              class="text-xs bg-green-100 text-green-600
+                     px-3 py-1 rounded-full"
+            >
+              HTML / CSS
+            </span>
+
+            <h3 class="text-xl font-bold mt-4">
+              Leaf & Bloom
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+              A nature-inspired responsive website
+              with a soft and elegant design.
+            </p>
+
+            <button
+              class="mt-5 text-pink-500 font-semibold
+                     hover:text-pink-700"
+            >
+              View Project →
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 3 -->
+        <div
+          class="bg-gray-50 rounded-2xl overflow-hidden
+                 shadow-md hover:shadow-2xl
+                 hover:-translate-y-2
+                 transition duration-300"
+        >
+
+          <div
+            class="h-44 bg-gradient-to-br
+                   from-blue-200 to-purple-300
+                   flex items-center justify-center
+                   text-6xl"
+          >
+            🎮
+          </div>
+
+          <div class="p-6">
+
+            <span
+              class="text-xs bg-blue-100 text-blue-600
+                     px-3 py-1 rounded-full"
+            >
+              JavaScript
+            </span>
+
+            <h3 class="text-xl font-bold mt-4">
+              Tic-Tac-Toe
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+              A fun interactive game built using
+              JavaScript DOM manipulation.
+            </p>
+
+            <button
+              class="mt-5 text-pink-500 font-semibold
+                     hover:text-pink-700"
+            >
+              View Project →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= STATS ================= -->
+
+  <section class="py-16">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div
+        class="bg-pink-500 rounded-3xl
+               p-10 text-white
+               grid grid-cols-2 md:grid-cols-4
+               gap-8 text-center shadow-xl"
+      >
+
+        <div>
+          <h2 class="text-4xl font-bold">6+</h2>
+          <p class="mt-2 text-pink-100">Projects</p>
+        </div>
+
+        <div>
+          <h2 class="text-4xl font-bold">10+</h2>
+          <p class="mt-2 text-pink-100">Technologies</p>
+        </div>
+
+        <div>
+          <h2 class="text-4xl font-bold">2+</h2>
+          <p class="mt-2 text-pink-100">Months Experience</p>
+        </div>
+
+        <div>
+          <h2 class="text-4xl font-bold">100%</h2>
+          <p class="mt-2 text-pink-100">Passion</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact" class="bg-white py-20">
+
+    <div class="max-w-3xl mx-auto px-6">
+
+      <div class="text-center mb-10">
+
+        <span class="text-pink-500 font-semibold">
+          GET IN TOUCH
+        </span>
+
+        <h2 class="text-4xl font-bold mt-2">
+          Contact Me
+        </h2>
+
+        <p class="text-gray-500 mt-3">
+          Have a project in mind? Let's talk!
+        </p>
+
+      </div>
+
+
+      <form class="bg-gray-50 p-8 rounded-3xl shadow-lg">
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+          <div>
+            <label class="block font-semibold mb-2">
+              Name
+            </label>
+
+            <input
+              type="text"
+              placeholder="Your name"
+              class="w-full px-4 py-3 rounded-xl
+                     border border-gray-200
+                     outline-none
+                     focus:ring-2 focus:ring-pink-400
+                     focus:border-pink-400"
+            />
+          </div>
+
+
+          <div>
+            <label class="block font-semibold mb-2">
+              Email
+            </label>
+
+            <input
+              type="email"
+              placeholder="you@example.com"
+              class="w-full px-4 py-3 rounded-xl
+                     border border-gray-200
+                     outline-none
+                     focus:ring-2 focus:ring-pink-400
+                     focus:border-pink-400"
+            />
+          </div>
+
+        </div>
+
+
+        <div class="mt-5">
+
+          <label class="block font-semibold mb-2">
+            Message
+          </label>
+
+          <textarea
+            rows="5"
+            placeholder="Write your message..."
+            class="w-full px-4 py-3 rounded-xl
+                   border border-gray-200
+                   outline-none resize-none
+                   focus:ring-2 focus:ring-pink-400
+                   focus:border-pink-400"
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="mt-6 w-full bg-pink-500
+                 text-white py-3 rounded-xl
+                 font-semibold
+                 hover:bg-pink-600
+                 hover:shadow-lg
+                 transition duration-300"
+        >
+          Send Message 💌
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="bg-gray-900 text-white py-8">
+
+    <div
+      class="max-w-6xl mx-auto px-6
+             flex flex-col md:flex-row
+             items-center justify-between gap-4"
     >
-      Explore
-    </button>
 
-  </div>
+      <p class="text-gray-400">
+        © 2026 Sehrish. All rights reserved.
+      </p>
+
+      <div class="flex gap-6">
+
+        <a
+          href="#"
+          class="text-gray-400 hover:text-pink-400 transition"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="#"
+          class="text-gray-400 hover:text-pink-400 transition"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="#home"
+          class="text-gray-400 hover:text-pink-400 transition"
+        >
+          ↑ Top
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
